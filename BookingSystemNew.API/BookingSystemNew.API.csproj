@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+    <Compile Remove="Properties\DataSource.cs" />
+    <Compile Remove="Properties\Program.cs" />
+    <Compile Remove="Properties\Startup.cs" />
+    <Compile Remove="Startup.cs" />
+    <Compile Remove="Status.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookingSystemNew.AccessData\BookingSystemNew.AccessData.csproj" />
+    <ProjectReference Include="..\BookingSystemNew.Domain\BookingSystemNew.Domain.csproj" />
+    <ProjectReference Include="..\BookingSystemNew.Service\BookingSystemNew.Service.csproj" />
+  </ItemGroup>
+
+</Project>
